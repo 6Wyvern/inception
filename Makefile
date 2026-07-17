@@ -6,7 +6,7 @@
 #    By: manualva <manualva@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/07 15:51:42 by manualva          #+#    #+#              #
-#    Updated: 2026/07/17 09:20:08 by manualva         ###   ########.fr        #
+#    Updated: 2026/07/17 10:11:00 by manualva         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,13 +23,13 @@ down:
 
 clean: down
 	docker system prune -f
-	rm -rf /home/manualva/data/mariadb/*
-	rm -rf /home/manualva/data/wordpress/*
+	sudo rm -rf /home/manualva/data/mariadb/*
+	sudo rm -rf /home/manualva/data/wordpress/*
 
 fclean: down
 	docker system prune -af --volumes
-	rm -rf /home/manualva/data/mariadb/*
-	rm -rf /home/manualva/data/wordpress/*
+	sudo rm -rf /home/manualva/data/mariadb/*
+	sudo rm -rf /home/manualva/data/wordpress/*
 
 re: fclean all
 
