@@ -12,19 +12,20 @@ services:
     env_file:
       - .env
 
-    wordpress:
-      container_name: wordpress
-      build:
-        context: ./requirements/wordpress
-      image: wordpress
-      depends_on:
-        - mariadb
-      volumes:
-        - /home/manualva/data/wordpress:/var/www/html
-      env_file:
-        - .env
-      networks:
-        - manualvanet
+  wordpress:
+    container_name: wordpress
+    build:
+      context: ./requirements/wordpress
+    image: wordpress
+    depends_on:
+      - mariadb
+    volumes:
+      - /home/manualva/data/wordpress:/var/www/html
+    restart: always
+    env_file:
+      - .env
+    networks:
+      - manualvanet
 
 networks:
   manualvanet:
