@@ -5,7 +5,7 @@ services:
       context: ./requirements/mariadb
     image: mariadb
     volumes:
-      - mariadb_data:/var/lib/mysql
+      - /home/manualva/data/mariadb:/var/lib/mysql
     restart: always
     networks:
       - manualvanet
@@ -16,6 +16,3 @@ networks:
   manualvanet:
     name: manualvanet
     driver: bridge
-
-volumes:
-  mariadb_data:
