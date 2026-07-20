@@ -5,7 +5,8 @@ RUN apt-get update && \
         php-fpm \
         php-mysql \
         php-cli \
-        curl && \
+        curl \
+        mariadb-client && \
     curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
     chmod +x wp-cli.phar && \
     mv wp-cli.phar /usr/local/bin/wp && \
