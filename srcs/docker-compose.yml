@@ -32,21 +32,19 @@ services:
     build:
       context: ./requirements/nginx
     image: nginx
+    depends_on:
+      - wordpress
     volumes:
-      - wordpress_data:/var/www/html
+      - /home/manualva/data/wordpress:/var/www/html
     ports:
       - "443:443"
     restart: always
+    env_file:
+      - .env
     networks:
       - manualvanet
-    depends_on:
-      - wordpress
 
 networks:
   manualvanet:
     name: manualvanet
     driver: bridge
-
-volumes:
-  mariadb_data:
-  wordpress_data:
