@@ -27,20 +27,20 @@ services:
     networks:
       - manualvanet
 
-    nginx:
-      container_name: nginx
-      build:
-        context: ./requirements/nginx
-      image: nginx
-      volumes:
-        - wordpress_data:/var/www/html
-      ports:
-        - "443:443"
-      restart: always
-      networks:
-        - manualvanet
-      depends_on:
-        - wordpress
+  nginx:
+    container_name: nginx
+    build:
+      context: ./requirements/nginx
+    image: nginx
+    volumes:
+      - wordpress_data:/var/www/html
+    ports:
+      - "443:443"
+    restart: always
+    networks:
+      - manualvanet
+    depends_on:
+      - wordpress
 
 networks:
   manualvanet:
