@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-COPY conf/mariadb.conf /etc/mysql/mariadb.conf.d/mariadb.conf
+COPY conf/mariadb.conf /etc/mysql/mariadb.conf.d/50-server.cnf
 
 COPY tools/setup.sh /setup.sh
 
