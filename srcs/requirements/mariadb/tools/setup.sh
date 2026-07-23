@@ -35,5 +35,6 @@ if [ ! -d "/var/lib/mysql/mysql" ]; then
 		shutdown
 fi
 
+echo "MariaDB setup complete!"
 echo "Starting MariaDB..."
 exec mysqld_safe

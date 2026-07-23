@@ -61,6 +61,7 @@ if ! wp core is-installed --path=/var/www/html --allow-root >/dev/null 2>&1; the
         --path=/var/www/html
 fi
 
+echo "Wordpress setup complete!"
 echo "Starting PHP-FPM..."
 
 chown -R www-data:www-data /var/www/html

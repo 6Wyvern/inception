@@ -20,6 +20,7 @@ if [ ! -f /etc/nginx/ssl/inception.crt ] || \
         -subj "/C=ES/ST=Catalonia/L=Barcelona/O=42/OU=Student/CN=manualva.42.fr"
 fi
 
+echo "NGINX Setup complete!"
 echo "Starting NGINX..."
 
 exec nginx -g "daemon off;"
