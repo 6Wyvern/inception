@@ -3,7 +3,7 @@ services:
     container_name: mariadb
     build:
       context: ./requirements/mariadb
-    image: mariadb
+    image: mariadb:manualva
     volumes:
       - /home/manualva/data/mariadb:/var/lib/mysql
     restart: always
@@ -19,7 +19,7 @@ services:
     container_name: wordpress
     build:
       context: ./requirements/wordpress
-    image: wordpress
+    image: wordpress:manualva
     depends_on:
       - mariadb
     volumes:
@@ -38,7 +38,7 @@ services:
     container_name: nginx
     build:
       context: ./requirements/nginx
-    image: nginx
+    image: nginx:manualva
     depends_on:
       - wordpress
     volumes:
