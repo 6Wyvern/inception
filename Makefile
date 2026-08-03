@@ -6,7 +6,7 @@
 #    By: manualva <manualva@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/07 15:51:42 by manualva          #+#    #+#              #
-#    Updated: 2026/07/17 10:11:00 by manualva         ###   ########.fr        #
+#    Updated: 2026/07/30 09:36:28 by manualva         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,12 @@ up:
 
 down:
 	docker compose -f srcs/docker-compose.yml down
+
+ps: 
+	docker compose -f srcs/docker-compose.yml ps
+
+logs: 
+	docker compose -f srcs/docker-compose.yml logs
 
 clean: down
 	docker system prune -f
